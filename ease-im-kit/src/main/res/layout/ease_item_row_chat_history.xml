@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_itease_layout"
+    android:layout_width="match_parent"
+    android:layout_height="74dp"
+
+
+    android:background="@color/black_15"
+    android:foreground="@drawable/ease_ripple_click_gray"
+    android:longClickable="true">
+
+    <com.benwunet.easeui.widget.RoundImageView
+        android:id="@+id/avatar"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        app:corner_radius="4dp"
+        app:roun_type="round"
+        android:src="@drawable/ease_default_avatar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/unread_msg_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ease"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintCircle="@id/avatar"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="4" />
+
+    <ImageView
+        android:id="@+id/iv_unread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ease_chat_voice_unread_icon"
+        android:visibility="gone"
+        app:layout_constraintCircle="@id/avatar"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/ease_conversation_color_item_name"
+        android:textSize="16sp"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toRightOf="@id/avatar"
+        app:layout_constraintRight_toLeftOf="@id/time"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:id="@+id/tv_belong"
+        android:layout_width="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/tv_temp"
+        android:textSize="11sp"
+        android:visibility="gone"
+        android:padding="1dp"
+        android:layout_marginLeft="11dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_temp"
+        app:layout_constraintTop_toTopOf="@+id/tv_temp"
+        android:layout_height="wrap_content"
+        android:textColor="#66CCFF"
+        android:text="本无网络科技有限公司"/>
+    <TextView
+        android:id="@+id/tv_temp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/name"
+        android:textSize="11sp"
+        android:padding="1dp"
+        android:layout_marginLeft="11dp"
+        android:background="@drawable/normal_bg_green"
+        app:layout_constraintBottom_toBottomOf="@+id/name"
+        app:layout_constraintTop_toTopOf="@+id/name"
+        android:layout_height="wrap_content"
+        android:textColor="#66CC99"
+        android:text="临时聊天"/>
+
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/ease_conversation_color_item_time"
+        android:textSize="13sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="123123"
+        tools:text="09:51"
+        />
+
+    <ImageView
+        android:id="@+id/msg_state"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginBottom="11dp"
+        android:src="@drawable/ease_msg_state_fail_resend"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/avatar" />
+
+    <TextView
+        android:id="@+id/mentioned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="5dp"
+        android:paddingLeft="7dp"
+        android:paddingTop="7dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="7dp"
+        android:text="@string/were_mentioned"
+        android:textColor="@color/ease_conversation_color_item_mention"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/msg_state" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="5dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingLeft="7dp"
+        android:paddingTop="7dp"
+        android:paddingRight="7dp"
+        android:text="ppp"
+        android:paddingBottom="7dp"
+        android:textColor="@color/ease_conversation_color_item_message"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toRightOf="@id/mentioned"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="环信成立于2013年4月，是国内领先的企业级软件服务提供商，于2016年荣膺" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
